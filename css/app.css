@@ -62,20 +62,50 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin: 0 auto; }
 
-h1 {
-  font-size: 2.5rem; }
-
-h2 {
-  font-size: 1.5rem;
-  margin-top: .75rem; }
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin-top: 1rem; }
+#main-menu ul {
+  list-style: none;
+  margin: 2.5rem auto 0;
+  width: 65%;
+  padding: 0; }
+  #main-menu ul.dropdown {
+    width: 100%;
+    margin: .25rem 0 0 3rem;
+    padding: 0;
+    font-size: 1rem; }
+  #main-menu ul li {
+    margin: 0 auto; }
+    #main-menu ul li a {
+      color: #414951;
+      font-family: "Lato", sans-serif;
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+      font-weight: 300;
+      vertical-align: middle;
+      -webkit-transition: color .2s;
+      -moz-transition: color .2s;
+      -ms-transition: color .2s;
+      -o-transition: color .2s;
+      transition: color .2s; }
+      #main-menu ul li a:hover {
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: none; }
+      #main-menu ul li a i {
+        margin-right: 1rem;
+        font-size: 1.75rem; }
+    #main-menu ul li.list-head#contact > a {
+      color: #078dcb; }
+    #main-menu ul li.list-head#skills > a {
+      color: #27b499; }
+    #main-menu ul li.list-head > a {
+      display: block;
+      color: #d25135;
+      margin: 1rem auto 0;
+      font-size: 1.5rem;
+      font-weight: 700; }
 
 #sidebar {
-  background: #11171b;
+  background: #d25135;
   min-height: 768px;
   position: absolute;
   width: 25%;
@@ -125,52 +155,22 @@ h3 {
       color: rgba(255, 255, 255, 0.75);
       display: block; }
 
+h1 {
+  font-size: 2.5rem; }
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: .75rem; }
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 1rem; }
+
 #main {
   width: 72%;
   position: absolute;
   margin: 0 auto;
   right: 0; }
-
-#main-menu ul {
-  list-style: none;
-  margin: 2.5rem auto 0;
-  width: 65%;
-  padding: 0; }
-  #main-menu ul.dropdown {
-    width: 100%;
-    margin: .25rem 0 0 3rem;
-    padding: 0;
-    font-size: 1rem; }
-  #main-menu ul li {
-    margin: 0 auto; }
-    #main-menu ul li a {
-      color: #414951;
-      font-family: "Lato", sans-serif;
-      margin: 0;
-      padding: 0;
-      font-size: 1.5rem;
-      font-weight: 300;
-      vertical-align: middle;
-      -webkit-transition: color .2s;
-      -moz-transition: color .2s;
-      -ms-transition: color .2s;
-      -o-transition: color .2s;
-      transition: color .2s; }
-      #main-menu ul li a:hover {
-        color: rgba(255, 255, 255, 0.75);
-        text-decoration: none; }
-      #main-menu ul li a i {
-        margin-right: 1rem;
-        font-size: 1.75rem; }
-    #main-menu ul li.list-head#contact > a {
-      color: #078dcb; }
-    #main-menu ul li.list-head#skills > a {
-      color: #27b499; }
-    #main-menu ul li.list-head > a {
-      display: block;
-      color: #d25135;
-      margin: 1rem auto 0;
-      font-size: 1.5rem;
-      font-weight: 700; }
 
 /*# sourceMappingURL=app.css.map */

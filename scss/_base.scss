@@ -1,0 +1,20 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color:#ccc;
+  @include font-face($copy);
+  color: #11171b;
+  font-size:16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-face($lato);
+  font-weight:700;
+  margin: 0 auto;
+}
