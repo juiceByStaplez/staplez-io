@@ -10,6 +10,10 @@ angular.module('appRoutes', [])
     templateUrl: 'views/skills.html',
     controller: 'skillsCtrl'
   })
+  .when('/work', {
+    templateUrl: 'views/work.html',
+    controller: 'workCtrl'
+  })
   .when('/contact', {
     templateUrl: 'views/contact.html',
     controller: 'contactCtrl'
