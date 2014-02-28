@@ -194,6 +194,16 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.animate-enter {
+  -webkit-transition: 1s linear all;
+  -moz-transition: 1s linear all;
+  -ms-transition: 1s linear all;
+  -o-transition: 1s linear all;
+  transition: 1s linear all;
+  opacity: 0; }
+  .animate-enter.animate-enter-active {
+    opacity: 1; }
+
 html {
   font-size: 62.5%;
   background: transparent; }
@@ -322,16 +332,6 @@ h3 {
   font-size: 1.5rem;
   font-weight: 300;
   margin-top: 1rem; }
-
-.animate-enter {
-  -webkit-transition: 1s linear all;
-  -moz-transition: 1s linear all;
-  -ms-transition: 1s linear all;
-  -o-transition: 1s linear all;
-  transition: 1s linear all;
-  opacity: 0; }
-  .animate-enter.animate-enter-active {
-    opacity: 1; }
 
 .skill > i {
   font-size: 4rem; }

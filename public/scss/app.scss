@@ -12,12 +12,11 @@ $pages:
 (contact #ffffff #000000);
 
 @import 'mixins';
-
+@import 'animations';
 @import 'base';
 @import 'navigation';
 @import 'sidebar';
 @import 'typography';
-@import 'animations';
 
 .skill {
   & > i {
