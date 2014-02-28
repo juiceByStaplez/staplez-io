@@ -3,6 +3,7 @@ module.exports = function(app) {
       res.sendfile('./public/index.html');
     });
   app.post('/deploy', function(payload) {
-    console.log('payload');
+    console.log(payload);
+    console.log('test');
   });
 };
