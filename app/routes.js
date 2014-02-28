@@ -9,7 +9,7 @@ module.exports = function(app) {
     var payer = payload.body.pusher;
     console.log(payer.name);
     if (payer.name == 'themcstaplez') {
-      child = exec('git pull',
+      child = shell('git pull',
         function(error, stdout, stderr) {
           console.log('stdout:' + stdout);
           console.log('stderr:' + stderr);
