@@ -21,10 +21,12 @@ $lato: 'Lato', sans-serif;
 @import 'sidebar';
 @import 'typography';
 
-#main {
+.page {
   width:72%;
   position:absolute;
   margin:0 auto;
+  top:0;
+  bottom:0;
   right:0;
 }
 
@@ -40,8 +42,4 @@ $lato: 'Lato', sans-serif;
     background: url(../img/icons/jquery.png) no-repeat;
     background-size:contain;
   }
-}
-
-.wut {
-  background: #ccc;
 }

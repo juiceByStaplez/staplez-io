@@ -1,7 +1,9 @@
 #sidebar {
   background: $sidebar-bg;
-  min-height:768px;
   position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
   width:25%;
   color:rgba(255,255,255,.75);
   -webkit-transform: translate3d(0,0,0);

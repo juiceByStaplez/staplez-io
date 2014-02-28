@@ -256,8 +256,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #sidebar {
   background: #ebc75d;
-  min-height: 768px;
   position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 25%;
   color: rgba(255, 255, 255, 0.75);
   -webkit-transform: translate3d(0, 0, 0);
@@ -317,10 +319,12 @@ h3 {
   font-weight: 300;
   margin-top: 1rem; }
 
-#main {
+.page {
   width: 72%;
   position: absolute;
   margin: 0 auto;
+  top: 0;
+  bottom: 0;
   right: 0; }
 
 .skill > i {
@@ -333,8 +337,5 @@ h3 {
   .icon.jquery {
     background: url(../img/icons/jquery.png) no-repeat;
     background-size: contain; }
-
-.wut {
-  background: #ccc; }
 
 /*# sourceMappingURL=app.css.map */
