@@ -199,7 +199,7 @@ html {
   background: transparent; }
 
 body {
-  background-color: #151218;
+  background-color: #556171;
   font-family: "Open Sans", sans-serif;
   color: rgba(255, 255, 255, 0.9);
   font-size: 16px; }
@@ -249,9 +249,9 @@ h1, h2, h3, h4, h5, h6 {
         margin-right: 1rem;
         font-size: 1.75rem; }
     #main-menu ul li.list-head#contact > a {
-      color: #078dcb; }
+      color: #c7f363; }
     #main-menu ul li.list-head#skills > a {
-      color: #27b499; }
+      color: #ebc75d; }
     #main-menu ul li.list-head > a {
       display: block;
       color: #d25135;
@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
       font-weight: 700; }
 
 #sidebar {
-  background: #ebc75d;
+  background: #151218;
   position: absolute;
   left: 0;
   width: 25%;
@@ -323,13 +323,15 @@ h3 {
   font-weight: 300;
   margin-top: 1rem; }
 
-.page {
-  width: 72%;
-  position: absolute;
-  margin: 0 auto;
-  top: 0;
-  bottom: 0;
-  right: 0; }
+.animate-enter {
+  -webkit-transition: 1s linear all;
+  -moz-transition: 1s linear all;
+  -ms-transition: 1s linear all;
+  -o-transition: 1s linear all;
+  transition: 1s linear all;
+  opacity: 0; }
+  .animate-enter.animate-enter-active {
+    opacity: 1; }
 
 .skill > i {
   font-size: 4rem; }
@@ -356,7 +358,25 @@ h3 {
       margin: 0 auto;
       max-width: 100%; }
 
-.page h1 {
-  text-align: center; }
+.page {
+  width: 75%;
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 15rem;
+  transition: all .5s;
+  background-color: #c7f363; }
+  .page h1 {
+    text-align: center; }
+  .page.home {
+    color: #e77351; }
+  .page.skills {
+    color: #556171; }
+  .page.work {
+    color: #222222; }
+  .page.contact {
+    color: black; }
 
 /*# sourceMappingURL=app.css.map */

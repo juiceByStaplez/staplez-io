@@ -1,4 +1,5 @@
 angular.module('ctrl.work', [])
 .controller('workCtrl',  function($scope){
-  $scope.pageClass = 'page-work';
+  $scope.pageClass = 'work';
+  $scope.pageTitle = 'Work';
 });

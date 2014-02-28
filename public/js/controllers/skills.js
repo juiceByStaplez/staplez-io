@@ -1,6 +1,7 @@
 angular.module('ctrl.skills', [])
 .controller('skillsCtrl', function($scope) {
-  $scope.pageClass = 'page-skills';
+  $scope.pageClass = 'skills';
+  $scope.pageTitle = 'Skills';
   $scope.skills = [
   {
     name: 'html',

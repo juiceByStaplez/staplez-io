@@ -1,18 +1,15 @@
 @import 'normalize';
+@import 'colors';
 
-$white: rgba(255,255,255,.9);
-$oj:#d25135;
-$blue: #078dcb;
-$teal: #27b499;
-$flatblue: #3bbdbf;
-$peach: #e77351;
-$mustard: #ebc75d;
-$melon: #5fcd9b;
-$black: #151218;
-$sidebar-bg: $mustard;
-$body-bg: $black;
+$sidebar-bg: $black;
+$body-bg: $bluegrey;
 $copy: 'Open Sans', sans-serif;
 $lato: 'Lato', sans-serif;
+$pages:
+(home   $blue  $peach),
+(skills   $black $bluegrey),
+(work $peach #222222),
+(contact #ffffff #000000);
 
 @import 'mixins';
 
@@ -20,15 +17,7 @@ $lato: 'Lato', sans-serif;
 @import 'navigation';
 @import 'sidebar';
 @import 'typography';
-
-.page {
-  width:72%;
-  position:absolute;
-  margin:0 auto;
-  top:0;
-  bottom:0;
-  right:0;
-}
+@import 'animations';
 
 .skill {
   & > i {
@@ -65,7 +54,25 @@ $lato: 'Lato', sans-serif;
 }
 
 .page {
+  width:75%;
+  position:absolute;
+  margin:0 auto;
+  top:0;
+  bottom:0;
+  right:0;
+  padding-top: 15rem;
+  transition: all .5s;
+  background-color: $melon;
   h1 {
     text-align: center;
+  }
+  @each $page in $pages {
+    $division: nth($page, 1);
+    $division-bg-color: nth($page, 2);
+    $division-title-color: nth($page, 3);
+
+    &.#{$division} {
+      color: #{$division-title-color};
+    }
   }
 }
