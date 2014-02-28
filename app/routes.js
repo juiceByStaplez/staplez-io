@@ -7,14 +7,13 @@ module.exports = function(app) {
     });
   app.post('/deploy', function(payload) {
     var payer = payload.body.pusher;
-    console.log(payer.name);
     if (payer.name == 'themcstaplez') {
       child = shell('git pull',
         function(error, stdout, stderr) {
-          console.log('stdout:' + stdout);
-          console.log('stderr:' + stderr);
           if (error != null) {
             console.log('exec error: ' + error)
+          } else {
+            console.log('Deploy successful!');
           }
       });
     }
