@@ -7,9 +7,6 @@ angular.module('appRoutes', [])
   })
   .when('/skills', {
     templateUrl: 'views/skills.html',
-  })
-  .otherwise({
-    redirectTo: '/'
   });
 
   $locationProvider.html5Mode(true);

@@ -1,4 +1,3 @@
-angular.module('sio', ['ngRoute', 'appRoutes', 'sioControllers', 'sioServices']);
+var app = angular.module('sio', ['ngRoute', 'appRoutes', 'sio.ctrl'])
 
-angular.module('sioControllers', []);
-angular.module('sioServices', []);
+angular.module('sio.ctrl', ['ctrl.main', 'ctrl.sidebar'])

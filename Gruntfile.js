@@ -45,7 +45,7 @@ module.exports = function (grunt) {
                 eqnull: true,
                 browser: true,
                 globals: {
-                    jQuery: true
+                    jQuery: false
                 }
             },
             gruntfile: {
@@ -58,11 +58,6 @@ module.exports = function (grunt) {
         qunit: {
             files: ['test/**/*.html']
         },
-        nodemon: {
-            dev: {
-                script: 'server.js'
-            }
-         },
         watch: {
             gruntfile: {
                 files: '<%= jshint.gruntfile.src %>',
@@ -71,29 +66,9 @@ module.exports = function (grunt) {
             lib_test: {
                 files: '<%= jshint.lib_test.src %>',
                 tasks: ['jshint:lib_test', 'qunit']
-            },
-            jade: {
-                 files: [
-                    'app/**/*.jade'
-                ],
-                tasks: ['jade:compile'],
-                nospawn: true
             }
-        },
-        jade: {
-          compile: {
-            options: {
-                pretty: true
-          },
-          files: [{
-            expand: true,
-            src: '/app/**/*.jade',
-            dest: '/public/views/',
-            ext: '.html'
-            }]
-          }
         }
     });
     // Default task
-    grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify', 'sass:dev', 'jade']);
+    grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify', 'jade']);
 };

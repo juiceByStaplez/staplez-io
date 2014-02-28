@@ -1,9 +1,0 @@
-doctype html
-html(lang='en')
-  include partials/head
-  body(ng-app='sio')
-    aside(ng-controller='sidebarCtrl')
-      include partials/sidebar
-    div(ng-view, class='page {{ pageClass }}')
-
-    include partials/foot
