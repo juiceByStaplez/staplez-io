@@ -3,9 +3,6 @@
   // modules =================================================
   var express = require('express');
   var app     = express();
-  var sys = require('sys');
-  var exec = require('child_process').exec;
-  function puts(error, stdout, stderr) { sys.puts(stdout)}
 
   // configuration ===========================================
 
@@ -24,12 +21,6 @@
 
   // routes ==================================================
   require('./app/routes')(app); // configure our routes
-  var gith = require('gith').create(9001);
-  gith({
-    repo: 'themcstaplez/gith'
-  }).on('all', function(payload) {
-    return exec("git pull", puts);
-  });
 
   // start app ===============================================
   app.listen(port);                   // startup our app at http://localhost:8080
