@@ -203,6 +203,11 @@ body {
   font-family: "Open Sans", sans-serif;
   color: rgba(255, 255, 255, 0.9);
   font-size: 16px; }
+  body:before, body:after {
+    content: "";
+    display: table; }
+  body:after {
+    clear: both; }
 
 a {
   text-decoration: none; }
@@ -257,10 +262,9 @@ h1, h2, h3, h4, h5, h6 {
 #sidebar {
   background: #ebc75d;
   position: absolute;
-  top: 0;
   left: 0;
-  bottom: 0;
   width: 25%;
+  min-height: 768px;
   color: rgba(255, 255, 255, 0.75);
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -337,5 +341,22 @@ h3 {
   .icon.jquery {
     background: url(../img/icons/jquery.png) no-repeat;
     background-size: contain; }
+
+#skills ul {
+  list-style: none;
+  padding: 0; }
+  #skills ul li {
+    display: inline-block;
+    text-align: center;
+    width: 33%; }
+    #skills ul li small {
+      display: block; }
+    #skills ul li img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%; }
+
+.page h1 {
+  text-align: center; }
 
 /*# sourceMappingURL=app.css.map */

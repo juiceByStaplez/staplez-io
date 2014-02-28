@@ -9,7 +9,11 @@ angular.module('appRoutes', [])
   .when('/skills', {
     templateUrl: 'views/skills.html',
     controller: 'skillsCtrl'
-  });
+  })
+  .when('/contact', {
+    templateUrl: 'views/contact.html',
+    controller: 'contactCtrl'
+  })
 
   $locationProvider.html5Mode(true);
  }]);
