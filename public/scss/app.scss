@@ -1,0 +1,47 @@
+@import 'normalize';
+
+$white: rgba(255,255,255,.9);
+$oj:#d25135;
+$blue: #078dcb;
+$teal: #27b499;
+$flatblue: #3bbdbf;
+$peach: #e77351;
+$mustard: #ebc75d;
+$melon: #5fcd9b;
+$black: #151218;
+$sidebar-bg: $mustard;
+$body-bg: $black;
+$copy: 'Open Sans', sans-serif;
+$lato: 'Lato', sans-serif;
+
+@import 'mixins';
+
+@import 'base';
+@import 'navigation';
+@import 'sidebar';
+@import 'typography';
+
+#main {
+  width:72%;
+  position:absolute;
+  margin:0 auto;
+  right:0;
+}
+
+.skill {
+  & > i {
+    font-size:4rem;
+  }
+}
+
+.icon {
+  @include icon;
+  &.jquery {
+    background: url(../img/icons/jquery.png) no-repeat;
+    background-size:contain;
+  }
+}
+
+.wut {
+  background: #ccc;
+}

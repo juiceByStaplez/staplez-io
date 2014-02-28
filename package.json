@@ -1,0 +1,28 @@
+{
+  "name": "staplezio",
+  "version": "0.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/themcstaplez/staplez-io.git"
+  },
+  "author": "Matthew McKey <mc@staplez.io> (http://staplez.io/)",
+  "dependencies": {
+    "express": "latest"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.13",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jade": "~0.10.0",
+    "grunt-contrib-sass": "~0.7.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-qunit": "~0.4.0",
+    "grunt-exec": "~0.4.5",
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-nodemon": "~0.2.0",
+    "jade-inheritance": "~0.1.0"
+  }
+}
