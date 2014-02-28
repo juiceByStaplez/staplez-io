@@ -2,7 +2,8 @@
 @import 'colors';
 
 $sidebar-bg: $black;
-$body-bg: $bluegrey;
+$header-bg: $black;
+$body-bg: $black;
 $copy: 'Open Sans', sans-serif;
 $lato: 'Lato', sans-serif;
 $pages:
@@ -14,6 +15,7 @@ $pages:
 @import 'mixins';
 @import 'animations';
 @import 'base';
+@import 'header';
 @import 'navigation';
 @import 'sidebar';
 @import 'typography';
@@ -53,15 +55,13 @@ $pages:
 }
 
 .page {
-  width:75%;
-  position:absolute;
+  width:100%;
+  float:left;
   margin:0 auto;
-  top:0;
-  bottom:0;
-  right:0;
-  padding-top: 15rem;
+  min-height:400px;
   transition: all .5s;
   background-color: $melon;
+  padding-top:20px;
   h1 {
     text-align: center;
   }
@@ -69,7 +69,6 @@ $pages:
     $division: nth($page, 1);
     $division-bg-color: nth($page, 2);
     $division-title-color: nth($page, 3);
-
     &.#{$division} {
       color: #{$division-title-color};
     }

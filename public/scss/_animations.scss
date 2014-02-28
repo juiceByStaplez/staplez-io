@@ -1,11 +1,32 @@
-.animate-enter {
-  -webkit-transition: 1s linear all;
-  -moz-transition: 1s linear all;
-  -ms-transition: 1s linear all;
-  -o-transition: 1s linear all;
-  transition: 1s linear all;
-  opacity: 0;
-  &.animate-enter-active {
+.change {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -ms-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position:relative;
+}
+
+.ng-enter {
+  @extend .change;
+  left:-10px;
+  opacity:0;
+  &.ng-enter-active {
+    left:0;
     opacity:1;
   }
+}
+
+.ng-leave {
+  @extend .change;
+  left:0;
+  opacity:1;
+  &.ng-leave-active {
+    left:-10px;
+    opacity:0;
+  }
+}
+
+.ng-move {
+  @extend .change;
 }

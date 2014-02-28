@@ -1,9 +1,9 @@
 #main-menu {
   ul {
     list-style:none;
-    margin: 2.5rem auto 0;
-    width:65%;
-    padding: 0;
+    margin: 1rem auto 0;
+    width:25%;
+    padding: 0 0 1.5rem;
     &.dropdown {
       width:100%;
       margin:.25rem 0 0 3rem;
@@ -11,7 +11,8 @@
       font-size:1rem;
     }
     li {
-      margin:0 auto;
+      margin:0 1rem;
+      display:inline-block;
       a {
       color: #414951;
       @include font-face($lato);

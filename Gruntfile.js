@@ -67,6 +67,14 @@ module.exports = function (grunt) {
                 files: '<%= jshint.lib_test.src %>',
                 tasks: ['jshint:lib_test', 'qunit']
             }
+        },
+        shell: {
+            pullRepo: {
+                options: {
+                    stdout: true
+                },
+                command: 'git pull'
+            }
         }
     });
     // Default task

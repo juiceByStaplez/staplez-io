@@ -1,3 +1,3 @@
-var app = angular.module('sio', ['ngRoute', 'ngAnimate', 'appRoutes', 'sio.ctrl'])
+var app = angular.module('sio', ['ngRoute', 'ngAnimate', 'appRoutes', 'sio.ctrl', 'sio.animations'])
 
 angular.module('sio.ctrl', ['ctrl.main', 'ctrl.sidebar', 'ctrl.skills', 'ctrl.contact','ctrl.work'])
