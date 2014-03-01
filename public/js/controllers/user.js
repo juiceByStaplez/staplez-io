@@ -1,6 +1,6 @@
 angular.module('ctrl.user', [])
-.controller('userController',
+.controller('userCtrl',
   function($scope) {
-    $scope.username = 'Matthew McKey';
+    $scope.username = 'staplez';
     $scope.job = 'Web Developer';
   });
