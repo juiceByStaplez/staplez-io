@@ -30,6 +30,13 @@ $pages:
   .skill-buttons {
   width:250px;
   margin: 1rem auto .5rem;
+  button {
+    -webkit-appearance: none;
+    color:$melon;
+    border: 1px solid $bluegrey;
+    background-color: $black;
+    border-radius: 4px;
+  }
   }
 
   ul.skill-list {

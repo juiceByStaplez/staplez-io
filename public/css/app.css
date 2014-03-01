@@ -369,6 +369,12 @@ h3 {
 .skill-buttons {
   width: 250px;
   margin: 1rem auto .5rem; }
+  .skill-buttons button {
+    -webkit-appearance: none;
+    color: #c7f363;
+    border: 1px solid #556171;
+    background-color: #151218;
+    border-radius: 4px; }
 
 ul.skill-list {
   list-style: none;
