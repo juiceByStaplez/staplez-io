@@ -59,18 +59,10 @@ $pages:
   float:left;
   margin:0 auto;
   min-height:400px;
-  transition: all .5s;
-  background-color: $melon;
+  position:relative;
+  color: $bluegrey;
   padding-top:20px;
   h1 {
     text-align: center;
-  }
-  @each $page in $pages {
-    $division: nth($page, 1);
-    $division-bg-color: nth($page, 2);
-    $division-title-color: nth($page, 3);
-    &.#{$division} {
-      color: #{$division-title-color};
-    }
   }
 }

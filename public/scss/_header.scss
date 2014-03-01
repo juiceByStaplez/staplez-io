@@ -38,7 +38,7 @@ text-align:center;
 
 #social-media {
   list-style:none;
-  width:540px;
+  width:100%;
   margin:2.5rem auto 0;
   padding:0;
   display:block;
@@ -50,7 +50,6 @@ text-align:center;
     & > a {
       color:$white;
       display:block;
-      border-right:1px inset rgba(255,255,255,.9);
     }
   }
 }

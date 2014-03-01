@@ -9,20 +9,20 @@
 
 .ng-enter {
   @extend .change;
-  left:-10px;
+  -webkit-transform: translate3d(-100%,0, 0);
   opacity:0;
   &.ng-enter-active {
-    left:0;
+    -webkit-transform: translate3d(0,0, 0);
     opacity:1;
   }
 }
 
 .ng-leave {
   @extend .change;
-  left:0;
+  -webkit-transform: translate3d(0,0, 0);
   opacity:1;
   &.ng-leave-active {
-    left:-10px;
+    -webkit-transform: translate3d(-100%,0, 0);
     opacity:0;
   }
 }

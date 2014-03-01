@@ -203,17 +203,17 @@ table {
   position: relative; }
 
 .ng-enter {
-  left: -10px;
+  -webkit-transform: translate3d(-100%, 0, 0);
   opacity: 0; }
   .ng-enter.ng-enter-active {
-    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
     opacity: 1; }
 
 .ng-leave {
-  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
   opacity: 1; }
   .ng-leave.ng-leave-active {
-    left: -10px;
+    -webkit-transform: translate3d(-100%, 0, 0);
     opacity: 0; }
 
 html {
@@ -241,7 +241,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper {
   width: 100%;
-  position: relative; }
+  position: relative;
+  border-bottom: 20px inset #151218;
+  background-color: #c7f363; }
   .wrapper:before, .wrapper:after {
     content: "";
     display: table; }
@@ -287,7 +289,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #social-media {
   list-style: none;
-  width: 540px;
+  width: 100%;
   margin: 2.5rem auto 0;
   padding: 0;
   display: block; }
@@ -298,13 +300,13 @@ h1, h2, h3, h4, h5, h6 {
     width: 23.5%; }
     #social-media li > a {
       color: rgba(255, 255, 255, 0.9);
-      display: block;
-      border-right: 1px inset rgba(255, 255, 255, 0.9); }
+      display: block; }
 
 #main-menu {
   width: 100%;
   position: relative;
-  float: left; }
+  float: left;
+  background-color: #151218; }
   #main-menu ul {
     list-style: none;
     margin: 1rem auto 0;
@@ -388,18 +390,10 @@ h3 {
   float: left;
   margin: 0 auto;
   min-height: 400px;
-  transition: all .5s;
-  background-color: #c7f363;
+  position: relative;
+  color: #556171;
   padding-top: 20px; }
   .page h1 {
     text-align: center; }
-  .page.home {
-    color: #e77351; }
-  .page.skills {
-    color: #556171; }
-  .page.work {
-    color: #222222; }
-  .page.contact {
-    color: black; }
 
 /*# sourceMappingURL=app.css.map */
