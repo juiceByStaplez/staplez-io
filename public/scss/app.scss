@@ -1,6 +1,7 @@
 @import 'normalize';
 @import 'colors';
 
+$icon-sprite: url(../img/icons/icon-sprite.png);
 $sidebar-bg: $black;
 $header-bg: $black;
 $body-bg: $black;
@@ -26,22 +27,20 @@ $pages:
   }
 }
 
-.icon {
-  @include icon;
-  &.jquery {
-    background: url(../img/icons/jquery.png) no-repeat;
-    background-size:contain;
+  .skill-buttons {
+  width:250px;
+  margin: 1rem auto .5rem;
   }
-}
 
-#skills {
-  ul {
+  ul.skill-list {
     list-style:none;
     padding:0;
     li {
       display:inline-block;
       text-align: center;
-      width:33%;
+      width:25%;
+      max-height:72px;
+      margin-bottom:20px;
       small {
         display:block;
       }
@@ -52,7 +51,6 @@ $pages:
       }
     }
   }
-}
 
 .page {
   width:100%;
@@ -65,4 +63,25 @@ $pages:
   h1 {
     text-align: center;
   }
+}
+
+.icon {
+  background-image: $icon-sprite;
+  display: block;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width:64px;
+  height:72px;
+&.angular{ background-position: 0 0;  }
+&.bower{ background-position: 0 -118px;  }
+&.css{ background-position: 0 -232px;  }
+&.digital-ocean{ background-position: 0 -354px;  }
+&.grunt{ background-position: 0 -439px;  }
+&.html{ background-position: 0 -549px;  }
+&.js{ background-position: 0 -671px;  }
+&.node{ background-position: 0 -807px;  }
+&.ruby{ background-position: 0 -929px;  }
+&.wordpress{ background-position: 0 -1034px;  }
+&.yeoman{ background-position: 0 -1147px;  }
+
 }

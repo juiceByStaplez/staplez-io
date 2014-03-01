@@ -2,6 +2,10 @@ angular.module('ctrl.skills', [])
 .controller('skillsCtrl', function($scope) {
   $scope.pageClass = 'skills';
   $scope.pageTitle = 'Skills';
+  $scope.activeCategory = '';
+  $scope.setCat = function(category) {
+    $scope.activeCategory = category;
+  };
   $scope.skills = [
   {
     name: 'html',
@@ -18,15 +22,22 @@ angular.module('ctrl.skills', [])
     description: 'Writing styles for pages'
   },
   {
-    name: 'jquery',
-    title: 'jQuery',
+    name: 'js',
+    title: 'Javascript',
     category: 'front-end',
     experience: 2,
     description: 'Mostly with Wordpress'
   },
+    {
+    name: 'angular',
+    title: 'AngularJS',
+    category: 'front-end',
+    experience: 1,
+    description: 'Using AngularJS for the front-end of web apps'
+  },
   {
-    name: 'php',
-    title: 'PHP',
+    name: 'wordpress',
+    title: 'Wordpress',
     category: 'back-end',
     experience: 2,
     description: 'Mostly with Wordpress'
@@ -34,7 +45,7 @@ angular.module('ctrl.skills', [])
   {
     name: 'ruby',
     title: 'Ruby on Rails',
-    category: 'front-end',
+    category: 'back-end',
     experience: 3,
     description: 'Writing web apps with Ruby on Rails'
   },
@@ -44,13 +55,6 @@ angular.module('ctrl.skills', [])
     category: 'back-end',
     experience: 1,
     description: 'Using NodeJS in projects'
-  },
-  {
-    name: 'angular',
-    title: 'AngularJS',
-    category: 'front-end',
-    experience: 1,
-    description: 'Using AngularJS for the front-end of web apps'
   },
 {
   name: 'grunt',
@@ -65,6 +69,20 @@ angular.module('ctrl.skills', [])
   category: 'package-manager',
   experience: 1,
   description: 'Using Bower to manage front-end assets'
+},
+{
+  name: 'yeoman',
+  title: 'Yeoman',
+  category: 'package-manager',
+  experience: 1,
+  description: 'Scaffolding apps using Yeoman generators.'
+},
+{
+  name: 'digital-ocean',
+  title:'Digital Ocean',
+  category: 'deployment',
+  experience: 1,
+  description: 'Deploying multiple sites/apps in various production environments.'
 }
 ];
 });

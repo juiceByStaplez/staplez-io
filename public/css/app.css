@@ -243,7 +243,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   position: relative;
   border-bottom: 20px inset #151218;
-  background-color: #c7f363; }
+  background-color: #c7f363;
+  height: 768px;
+  zoom: 1;
+  overflow: hidden; }
   .wrapper:before, .wrapper:after {
     content: "";
     display: table; }
@@ -363,24 +366,22 @@ h3 {
 .skill > i {
   font-size: 4rem; }
 
-.icon {
-  width: 40px;
-  height: 40px;
-  display: inline-block; }
-  .icon.jquery {
-    background: url(../img/icons/jquery.png) no-repeat;
-    background-size: contain; }
+.skill-buttons {
+  width: 250px;
+  margin: 1rem auto .5rem; }
 
-#skills ul {
+ul.skill-list {
   list-style: none;
   padding: 0; }
-  #skills ul li {
+  ul.skill-list li {
     display: inline-block;
     text-align: center;
-    width: 33%; }
-    #skills ul li small {
+    width: 25%;
+    max-height: 72px;
+    margin-bottom: 20px; }
+    ul.skill-list li small {
       display: block; }
-    #skills ul li img {
+    ul.skill-list li img {
       display: block;
       margin: 0 auto;
       max-width: 100%; }
@@ -395,5 +396,35 @@ h3 {
   padding-top: 20px; }
   .page h1 {
     text-align: center; }
+
+.icon {
+  background-image: url(../img/icons/icon-sprite.png);
+  display: block;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 64px;
+  height: 72px; }
+  .icon.angular {
+    background-position: 0 0; }
+  .icon.bower {
+    background-position: 0 -118px; }
+  .icon.css {
+    background-position: 0 -232px; }
+  .icon.digital-ocean {
+    background-position: 0 -354px; }
+  .icon.grunt {
+    background-position: 0 -439px; }
+  .icon.html {
+    background-position: 0 -549px; }
+  .icon.js {
+    background-position: 0 -671px; }
+  .icon.node {
+    background-position: 0 -807px; }
+  .icon.ruby {
+    background-position: 0 -929px; }
+  .icon.wordpress {
+    background-position: 0 -1034px; }
+  .icon.yeoman {
+    background-position: 0 -1147px; }
 
 /*# sourceMappingURL=app.css.map */

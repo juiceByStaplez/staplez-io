@@ -1,6 +1,13 @@
 <h1 class="title">{{pageTitle}}</h1>
-<section id="skills">
-  <ul>
-    <li ng-repeat="skill in skills"><img src="img/icons/{{skill.name}}.png" width="64">{{skill.title}}<small>{{skill.description}}</small></li>
-  </ul>
+<section class="skill-buttons">
+  <button ng-click="setCat('')">All</button>
+  <button ng-click="setCat('front-end')">Front End</button>
+  <button ng-click="setCat('back-end')">Back End</button>
 </section>
+  <ul class="skill-list">
+    <li ng-repeat="skill in skills | filter: {category: activeCategory}">
+    <i class="icon {{skill.name}}"></i>
+   <!--  <strong>{{ skill.title }}</strong>
+    <small>{{skill.description}}</small> -->
+    </li>
+  </ul>
