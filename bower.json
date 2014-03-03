@@ -6,7 +6,7 @@
   ],
   "description": "Portfolio website",
   "dependencies": {
-    "bootstrap": "latest",
+    "angular-bootstrap":"latest",
     "font-awesome": "latest",
     "animate.css": "latest",
     "angular": "latest",
