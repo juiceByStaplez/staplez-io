@@ -363,6 +363,10 @@ h3 {
   font-weight: 300;
   margin-top: 1rem; }
 
+.form-container {
+  width: 50%;
+  padding-left: 20px; }
+
 .skill > i {
   font-size: 4rem; }
 
@@ -399,7 +403,8 @@ ul.skill-list {
   min-height: 400px;
   position: relative;
   color: #556171;
-  padding-top: 20px; }
+  padding-top: 20px;
+  padding-bottom: 20px; }
   .page h1 {
     text-align: center; }
 

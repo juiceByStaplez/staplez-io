@@ -5,6 +5,7 @@ $icon-sprite: url(../img/icons/icon-sprite.png);
 $sidebar-bg: $black;
 $header-bg: $black;
 $body-bg: $black;
+$page-text: $bluegrey;
 $copy: 'Open Sans', sans-serif;
 $lato: 'Lato', sans-serif;
 $pages:
@@ -20,6 +21,7 @@ $pages:
 @import 'navigation';
 @import 'sidebar';
 @import 'typography';
+@import 'forms';
 
 .skill {
   & > i {
@@ -65,8 +67,9 @@ $pages:
   margin:0 auto;
   min-height:400px;
   position:relative;
-  color: $bluegrey;
+  color: $page-text;
   padding-top:20px;
+  padding-bottom:20px;
   h1 {
     text-align: center;
   }
@@ -90,5 +93,4 @@ $pages:
 &.ruby{ background-position: 0 -929px;  }
 &.wordpress{ background-position: 0 -1034px;  }
 &.yeoman{ background-position: 0 -1147px;  }
-
 }

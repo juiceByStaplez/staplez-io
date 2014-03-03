@@ -1,1 +1,16 @@
 <h1 class="title">{{pageTitle}}</h1>
+<div class="form-container">
+  <form name="contactForm" ng-submit="submitForm()" novalidate>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" name="name" ng-model="name" required>
+    <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine">Your name is required.</p>
+  </div>
+    <div class="form-group">
+    <label>Email</label>
+    <input type="text" class="form-control" name="name" ng-model="email" required>
+    <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine">Your e-mail is required.</p>
+  </div>
+  <button type="submit" class="btn btn-danger btn-lg" ng-disabled="contactForm.$invalid">Send Away!</button>
+</form>
+</div>
