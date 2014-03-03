@@ -66,6 +66,14 @@ module.exports = function (grunt) {
             lib_test: {
                 files: '<%= jshint.lib_test.src %>',
                 tasks: ['jshint:lib_test', 'qunit']
+            },
+            styles: {
+                files: 'public/scss/*.scss',
+                tasks: ['sass:dev']
+            },
+            coffee: {
+                files: 'public/coffee/*.coffee',
+                tasks: ['coffee:compile']
             }
         },
         shell: {
@@ -75,8 +83,30 @@ module.exports = function (grunt) {
                 },
                 command: 'git pull'
             }
+        },
+        sass: {
+            dev: {
+                files: {
+                    'public/css/app.css':'public/scss/app.scss'
+                },
+                options: {
+                    style: 'expanded',
+                    sourcemap: true,
+                    compass: true
+                }
+            }
+        },
+        coffee: {
+            compile: {
+                files: {
+                    'public/js/app.js':'public/coffee/app.coffee'
+                },
+                options: {
+                    bare: true
+                }
+            }
         }
     });
     // Default task
-    grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify', 'jade']);
+    grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
 };

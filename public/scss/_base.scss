@@ -7,7 +7,7 @@ body {
   background-color:$body-bg;
   @include font-face($copy);
   color: $white;
-  font-size:16px;
+  @include font-size(16);
   @include clearfix;
 }
 
@@ -25,8 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   width:100%;
   @include clearfix;
   position: relative;
-  border-bottom: 20px inset $black;
-  background-color: $melon;
+  background-color: $sun;
   height:768px;
   zoom:1;
   overflow: hidden;

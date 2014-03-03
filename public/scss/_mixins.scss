@@ -15,13 +15,13 @@
 
 @mixin breakpoint($point) {
   @if $point == large {
-    @media (min-width: 64.375em) { @content; }
+    @media (min-width: 64.375rem) { @content; }
   }
   @else if $point == medium {
-    @media (min-width: 50em) { @content; }
+    @media (min-width: 50rem) { @content; }
   }
   @else if $point == small {
-    @media (min-width: 37.5em)  { @content; }
+    @media (min-width: 37.5rem)  { @content; }
   }
 }
 
@@ -37,4 +37,9 @@
   -webkit-border-radius: $width/2;
      -moz-border-radius: $width/2;
           border-radius: $width/2;
+}
+
+@mixin font-size($sizeValue: 12) {
+  font-size: $sizeValue + px;
+  font-size: (0.125 * $sizeValue) + rem;
 }
