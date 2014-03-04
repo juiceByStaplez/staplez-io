@@ -1,1 +1,1 @@
-var app = angular.module('sio.directives', []);
+angular.module('sio.directives', [])

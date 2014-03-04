@@ -39,6 +39,7 @@ angular.module('ctrl.nav', [])
       icon: 'envelope-o'
     }
     ];
+    $scope.isToggled = false;
   });
 angular.module('ctrl.sidebar', [])
 .controller('sidebarCtrl', function($scope) {

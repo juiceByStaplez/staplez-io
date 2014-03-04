@@ -16,7 +16,7 @@
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
     -->
   </head>
-  <body ng-app="sio">
+  <body ng-app="sio" ng-init="isToggled = false">
 <div class="wrapper">
         <header class="header">
             <section id="profile" ng-controller="userCtrl">
@@ -37,12 +37,14 @@
         </ul>
     </nav>
     </header>
-    <div class="page {{ pageClass }} change" ng-view></div>
+    <div class="page {{ pageClass }} slideIn" ng-view></div>
 </div>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/TweenMax.min.js"></script>
     <script src="libs/angular-route/angular-route.min.js"></script>
     <script src="libs/angular-animate/angular-animate.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/animations.js"></script>
     <script src="js/appRoutes.js"></script>
     <script src="js/directives.js"></script>
     <script src="js/controllers.js"></script>

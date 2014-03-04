@@ -57,6 +57,9 @@ module.exports = function (grunt) {
             },
             lib_test: {
                 src: ['lib/**/*.js', 'test/**/*.js']
+            },
+            ng: {
+                src: 'public/js/*.js'
             }
         },
         qunit: {
@@ -77,7 +80,7 @@ module.exports = function (grunt) {
             },
             scripts: {
                 files: ['<%= concat.ctrl.src %>', '<%= concat.srv.src %>'],
-                tasks: ['concat:ctrl', 'concat:srv']
+                tasks: ['concat:ctrl', 'concat:srv', 'jshint:ng']
             }
         },
         shell: {

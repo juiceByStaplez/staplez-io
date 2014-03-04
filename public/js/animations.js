@@ -1,24 +1,33 @@
 angular.module('sio.animations', [])
-.animation('.my-show-hide-animation', function() {
+.animation('.toggle', function() {
+  'use strict';
   return {
-    beforeAddClass : function(element, className, done) {
-      if(className == 'ng-hide') {
-        jQuery(element).animate({
-          opacity:0
-        }, done);
-      } else {
-        done();
-      }
+    leave: function(element, done) {
+      TweenMax.to(element, 1, {opacity:0, onComplete: done});
     },
-    removeClass : function(element, className, done) {
-      if (className == 'ng-hide') {
-        element.css('opacity', 0);
-        jQuery(element).animate({
-          opacity:1
-        }, done);
-      } else {
-        done();
-      }
+    enter: function(element, done) {
+      TweenMax.from(element, 1, {opacity: 0, onComplete: done});
     }
-  };
+  }
+})
+.animation('.slideIn', function() {
+  return {
+    leave:function(element,done) {
+      TweenMax.to(element, 0.4, {x:-600, opacity:0, onComplete: done});
+    },
+    enter: function(element, done) {
+      TweenMax.to(element, 0.4, {x:0, opacity: 1, onComplete: done});
+    }
+  }
+})
+
+.animation('.collapsed', function() {
+  return {
+    leave: function(element, done) {
+      TweenMax.to(element, 0.4, {y: -400, onComplete: done});
+    },
+    enter: function(element, done) {
+      TweenMax.to(element, 0.4, {y: 0, onComplete: done})
+    }
+  }
 });

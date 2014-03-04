@@ -1,25 +1,21 @@
-.change {
-  @include transition(all, 0.5s, ease-in-out);
+.slideUp {
+  @include transition(all, 0.5s, linear);
   &.ng-enter {
-  -webkit-transform: translate3d(0,-100%, 0);
+   -webkit-transform: translate3d(0,-100%, 0);
   }
   &.ng-enter-active {
     -webkit-transform: translate3d(0,0, 0);
   }
   &.ng-leave {
-    -webkit-transform: translate3d(0,0, 0);
+  -webkit-transform: translate3d(0,0, 0);
   }
   &.ng-leave-active {
-    -webkit-transform: translate3d(0,-100%, 0);
+  -webkit-transform: translate3d(0,-100%, 0);
   }
 }
-
-.skill-list {
-  @include transition(all, 0.5s, linear);
-  &.ng-enter {
-    -webkit-transform: translateY(-100%);
+.ng-enter {
+  z-index:8888;
   }
-  &.ng-enter-active {
-    -webkit-transform: translateY(0);
+  .ng-leave {
+    z-index: 9999;
   }
-}

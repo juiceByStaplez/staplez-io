@@ -18,4 +18,5 @@ angular.module('ctrl.nav', [])
       icon: 'envelope-o'
     }
     ];
+    $scope.isToggled = false;
   });
