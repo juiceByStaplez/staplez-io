@@ -1,19 +1,20 @@
 <h1 class="title">{{pageTitle}}</h1>
-<div class="form-container">
-  <form name="contactForm" ng-submit="submitForm()" novalidate>
+<div class="form-container" >
+<strong class="success" ng-if="submitted">Thank you for your submission!</strong>
+  <form name="contactForm" ng-submit="submitForm(formData)" novalidate ng-hide="submitted">
   <div class="form-group">
     <label>Name</label>
-    <input type="text" class="form-control" name="name" ng-model="name" required>
+    <input type="text" class="form-control" name="name" ng-model="formData.name" required>
     <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine">Your name is required.</p>
   </div>
     <div class="form-group">
     <label>Email</label>
-    <input type="text" class="form-control" name="name" ng-model="email" required>
+    <input type="text" class="form-control" name="name" ng-model="formData.email" required>
     <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine">Your e-mail is required.</p>
   </div>
   <div class="form-group">
     <label>Message</label>
-    <input type="text" class="form-control" name="message" ng-model="message" required />
+    <input type="text" class="form-control" name="message" ng-model="formData.message" required />
   </div>
   <button type="submit" class="btn btn-danger btn-lg" ng-disabled="contactForm.$invalid">Send Away!</button>
 </form>
