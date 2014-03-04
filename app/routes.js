@@ -6,6 +6,9 @@ module.exports = function(app) {
   app.get('*', function(req, res) {
       res.sendfile('./public/index.html');
     });
+  app.post('/contact', function(req, res) {
+    console.log(req.body);
+  });
   app.post('/deploy', function(payload) {
     var payer = payload.body.pusher;
     if (payer.name == 'themcstaplez') {

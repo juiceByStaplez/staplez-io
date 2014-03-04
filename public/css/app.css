@@ -388,6 +388,14 @@ h1, h2, h3, h4, h5, h6 {
 #social-media li > a {
   color: rgba(255, 255, 255, 0.9);
   display: block;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+#social-media li > a:hover {
+  -webkit-transform: rotateZ(80deg);
 }
 
 #main-menu {

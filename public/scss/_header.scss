@@ -56,6 +56,10 @@ text-align:center;
     & > a {
       color:$white;
       display:block;
+      @include transition(all, 0.25s, linear);
+      &:hover {
+        -webkit-transform: rotateZ(80deg);
+      }
     }
   }
 }

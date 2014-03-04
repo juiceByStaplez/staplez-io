@@ -5,7 +5,7 @@ angular.module('ctrl.contact', [])
 
   $scope.submitForm = function() {
     if ($scope.contactForm.$valid) {
-    alert('our form is amazing!');
+
     }
    };
 });
