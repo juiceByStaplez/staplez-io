@@ -1,1 +1,7 @@
 <h1 class="title">{{pageTitle}}</h1>
+<article ng-repeat="job in jobs" class="job">
+  <a href="//{{job.url}}" target="_blank"><h2>{{job.name}}</h2></a>
+  <h3>{{job.title}}</h3>
+  <small>{{job.from}} - {{job.to}}</small>
+  <p>{{job.description}}</p>
+</article>

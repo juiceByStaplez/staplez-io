@@ -2,9 +2,18 @@ angular.module('ctrl.skills', [])
 .controller('skillsCtrl', function($scope) {
   $scope.pageClass = 'skills';
   $scope.pageTitle = 'Skills';
-  $scope.activeCategory = '';
+  $scope.activeCategory = undefined;
+  $scope.activeSkill = '';
   $scope.setCat = function(category) {
+    $scope.activeSkill = undefined;
     $scope.activeCategory = category;
+    if (category != undefined) {
+      $scope.categoryName = category.split('-').join(' ');
+    }
+  };
+  $scope.setActiveSkill = function(skill) {
+    $scope.activeSkill = skill;
+    $scope.activeCategory = skill.category;
   };
   $scope.skills = [
   {
@@ -12,14 +21,14 @@ angular.module('ctrl.skills', [])
     title: 'HTML5',
     category: 'front-end',
     experience: 3,
-    description: 'Writing mark-up'
+    description: 'Writing mark-up for my projects.'
   },
     {
     name: 'css',
     title: 'CSS3',
     category: 'front-end',
     experience: 3,
-    description: 'Writing styles for pages'
+    description: 'Writing styles for pages.'
   },
   {
     name: 'js',
@@ -33,7 +42,7 @@ angular.module('ctrl.skills', [])
     title: 'AngularJS',
     category: 'front-end',
     experience: 1,
-    description: 'Using AngularJS for the front-end of web apps'
+    description: 'For front-end templating'
   },
   {
     name: 'wordpress',
@@ -61,7 +70,7 @@ angular.module('ctrl.skills', [])
   title: 'Grunt',
   category: 'back-end',
   experience: 1,
-  description: 'Using GruntJS to automate repetitive tasks'
+  description: 'To automate repetitive tasks'
 },
 {
   name: 'bower',

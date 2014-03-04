@@ -8,7 +8,8 @@
   },
   "author": "Matthew McKey <mc@staplez.io> (http://staplez.io/)",
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "mongoose":"latest"
   },
   "devDependencies": {
     "grunt-cli": "~0.1.13",

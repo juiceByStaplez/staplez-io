@@ -3,11 +3,18 @@
   <button ng-click="setCat()">All</button>
   <button ng-click="setCat('front-end')">Front End</button>
   <button ng-click="setCat('back-end')">Back End</button>
+  <button ng-click="setCat('package-manager')">Package Managers</button>
+  <button ng-click="setCat('deployment')">Deployment</button>
 </section>
-  <ul class="skill-list">
-    <li ng-repeat="skill in skills | filter: {category: activeCategory}">
+  <ul class="skill-list {{activeCategory}}">
+    <li ng-repeat="skill in skills | filter: {category: activeCategory}" ng-click="setActiveSkill(skill)" ng-mouseover="setActiveSkills(skill)">
     <i class="icon {{skill.name}}"></i>
-    <!-- <strong>{{ skill.title }}</strong> -->
-<!--     <small>{{skill.description}}</small> -->
+    <strong>{{ skill.title }}</strong>
     </li>
   </ul>
+<aside class="skillset" ng-if="activeCategory != undefined">
+  <h2 class="skill-category">{{categoryName}} skills</h2>
+  <strong>{{activeSkill.title}}</strong>
+  <p>{{activeSkill.description}}</p>
+  <small ng-if="activeSkill != undefined">Experience: {{activeSkill.experience}} years</small>
+</aside>

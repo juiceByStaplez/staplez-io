@@ -2,12 +2,12 @@
   width:100%;
   position:relative;
   float:left;
-  background-color: $black;
+  background-color: $nav-bg;
   ul {
     list-style:none;
     width:100%;
     padding: 0 0 1.5rem;
-    text-align: center;
+    text-align:left;
     li {
       @include center-block;
       a {
@@ -30,25 +30,27 @@
       i  {
         margin-right:1rem;
         font-size: 1.75rem;
+        float:left;
       }
       }
       &.list-head {
         &#contact {
         & >  a {
-            color: $melon;
           }
         }
         &#skills {
           & > a {
-            color:$mustard;
           }
         }
         & > a {
           display:block;
-          color:$oj;
+          color:$white;
           margin: 1rem auto 0;
           font-size:1.5rem;
           font-weight:700;
+          &:hover {
+            color: $melon;
+          }
           i {
           }
         }

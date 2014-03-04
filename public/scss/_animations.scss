@@ -1,33 +1,25 @@
 .change {
-  -webkit-transition: 0.5s linear all;
-  -moz-transition: 0.5s linear all;
-  -ms-transition: 0.5s linear all;
-  -o-transition: 0.5s linear all;
-  transition: 0.5s linear all;
-}
-
-.ng-enter {
-  @extend .change;
-  z-index:8888;
-  -webkit-transform: translate3d(-100%,0, 0);
-  opacity:0;
+  @include transition(all, 0.5s, ease-in-out);
+  &.ng-enter {
+  -webkit-transform: translate3d(0,-100%, 0);
+  }
   &.ng-enter-active {
     -webkit-transform: translate3d(0,0, 0);
-    opacity:1;
   }
-}
-
-.ng-leave {
-  @extend .change;
-  -webkit-transform: translate3d(0,0, 0);
-  z-index:8887;
-  opacity:1;
+  &.ng-leave {
+    -webkit-transform: translate3d(0,0, 0);
+  }
   &.ng-leave-active {
-    -webkit-transform: translate3d(-100%,0, 0);
-    opacity:0;
+    -webkit-transform: translate3d(0,-100%, 0);
   }
 }
 
-.ng-move {
-  @extend .change;
+.skill-list {
+  @include transition(all, 0.5s, linear);
+  &.ng-enter {
+    -webkit-transform: translateY(-100%);
+  }
+  &.ng-enter-active {
+    -webkit-transform: translateY(0);
+  }
 }

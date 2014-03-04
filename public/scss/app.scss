@@ -1,19 +1,20 @@
 @import 'normalize';
 @import 'colors';
 
+
 $icon-sprite: url(../img/icons/icon-sprite.png);
 $sidebar-bg: $black;
-$header-bg: $black;
+$header-bg: $peach;
+$header-border-color: $oj;
+$wrap-bg: $sun;
 $body-bg: $black;
-$page-text: $melon;
+$page-text: $black;
+$nav-bg: $header-bg;
+$link-color: $white;
+$link-hover: $oj;
+$title-text: $oj;
 $copy: 'Open Sans', sans-serif;
 $lato: 'Lato', sans-serif;
-$pages:
-(home   $blue  $peach),
-(skills   $black $bluegrey),
-(work $peach #222222),
-(contact #ffffff #000000);
-
 @import 'mixins';
 @import 'animations';
 @import 'base';
@@ -24,34 +25,54 @@ $pages:
 @import 'forms';
 
 .skill {
+  @include font-size(12);
   & > i {
     font-size:4rem;
   }
 }
 
   .skill-buttons {
-  width:250px;
+  width:530px;
   margin: 1rem auto .5rem;
   button {
     -webkit-appearance: none;
-    color:$melon;
-    border: 1px solid $bluegrey;
-    background-color: $black;
+    color:$white;
+    background-color: $peach;
+    border:none;
     border-radius: 4px;
+    @include font-size(14);
   }
   }
+
+$skillsets:
+(front-end),
+(back-end),
+(package-manager),
+(deployment);
 
   ul.skill-list {
     list-style:none;
     padding:0;
+    margin-top:1rem;
+    @each $skillset in $skillsets{
+      $div: nth($skillset, 1);
+      &.#{$div} {
+        width:25%;
+        float:left;
+        & > li {
+          width:100%;
+        }
+      }
+    }
+    }
     li {
       display:inline-block;
       text-align: center;
       width:25%;
-      max-height:72px;
       margin-bottom:20px;
       small {
         display:block;
+        @include font-size(11);
       }
       img {
         display:block;
@@ -59,7 +80,17 @@ $pages:
         max-width:100%;
       }
     }
-  }
+
+    .skillset {
+      width:65%;
+      float:left;
+      @include font-size(12);
+      & > h2 {
+        &.skill-category {
+          text-transform: capitalize;
+        }
+      }
+    }
 
 .page {
   width:75%;
@@ -70,8 +101,12 @@ $pages:
   color: $page-text;
   padding-top:20px;
   padding-bottom:20px;
+  padding-left:20px;
   h1 {
-    text-align: center;
+    &.title {
+    color: $title-text;
+    margin-left:20px;
+    }
   }
 }
 
@@ -80,17 +115,35 @@ $pages:
   display: block;
   background-repeat: no-repeat;
   margin: 0 auto;
+  cursor:pointer;
   width:64px;
   height:72px;
 &.angular{ background-position: 0 0;  }
 &.bower{ background-position: 0 -118px;  }
 &.css{ background-position: 0 -232px;  }
-&.digital-ocean{ background-position: 0 -354px;  }
+&.digital-ocean{ background-position: 0 -334px;  }
 &.grunt{ background-position: 0 -439px;  }
 &.html{ background-position: 0 -549px;  }
 &.js{ background-position: 0 -671px;  }
 &.node{ background-position: 0 -807px;  }
-&.ruby{ background-position: 0 -929px;  }
+&.ruby{ background-position: 0 -919px;  }
 &.wordpress{ background-position: 0 -1034px;  }
 &.yeoman{ background-position: 0 -1147px;  }
+}
+
+.job {
+  width:49%;
+  float:left;
+  color: $peach;
+  p {
+    @include font-size(12);
+  }
+  a {
+    text-decoration: none;
+    color: $link-color;
+    @include transition(color, 0.25s, ease);
+    &:hover {
+      color: $link-hover;
+    }
+  }
 }
