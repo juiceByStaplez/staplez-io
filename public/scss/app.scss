@@ -141,7 +141,21 @@ $skillsets:
   a {
     text-decoration: none;
     color: $link-color;
+    display:block;
+    text-transform: capitalize;
     @include transition(color, 0.25s, ease);
+    &.gatorworks {
+      background-image: url(../img/icons/gatorworks.png);
+      width:64px;
+      height:64px;
+      background-repeat: no-repeat;
+    }
+    &.dezinsInteractive {
+      background-image: url(../img/icons/dezinsinteractive.png);
+      width:64px;
+      height:64px;
+      background-repeat: no-repeat;
+    }
     &:hover {
       color: $link-hover;
     }

@@ -3,7 +3,7 @@ angular.module('ctrl.work', [])
   $scope.pageClass = 'work';
   $scope.pageTitle = 'Work';
   $scope.jobs = [
-  {name: 'Gatorworks',
+  {name: 'gatorworks',
     from: '8-28-2013',
     to: '2-28-2014',
     url: 'gatorworks.net',
