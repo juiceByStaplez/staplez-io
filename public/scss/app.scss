@@ -53,6 +53,8 @@ $skillsets:
     list-style:none;
     padding:0;
     margin-top:1rem;
+    width:100%;
+    @include transition(all, 0.3s, linear);
     @each $skillset in $skillsets{
       $div: nth($skillset, 1);
       &.#{$div} {

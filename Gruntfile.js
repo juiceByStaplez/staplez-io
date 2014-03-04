@@ -8,7 +8,7 @@ module.exports = function (grunt) {
             '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
             '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
             '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-            ' Licensed <%= props.license %> */\n',
+            ' Licensed <%= pkg.license %> */\n',
         // Task configuration
         concat: {
             options: {
@@ -16,8 +16,8 @@ module.exports = function (grunt) {
                 stripBanners: true
             },
             dist: {
-                src: ['lib/<%= pkg.name %>.js'],
-                dest: 'dist/<%= pkg.name %>.js'
+                src: 'public/js/controllers/*.js',
+                dest: 'public/js/controllers.js'
             }
         },
         uglify: {
@@ -71,9 +71,9 @@ module.exports = function (grunt) {
                 files: 'public/scss/*.scss',
                 tasks: ['sass:dev']
             },
-            coffee: {
-                files: 'public/coffee/*.coffee',
-                tasks: ['coffee:compile']
+            scripts: {
+                files: '<%= concat.dist.src %>',
+                tasks: ['concat:dist']
             }
         },
         shell: {
