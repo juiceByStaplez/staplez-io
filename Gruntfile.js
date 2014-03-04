@@ -15,9 +15,13 @@ module.exports = function (grunt) {
                 banner: '<%= banner %>',
                 stripBanners: true
             },
-            dist: {
+            ctrl: {
                 src: 'public/js/controllers/*.js',
                 dest: 'public/js/controllers.js'
+            },
+            srv: {
+                src: 'public/js/services/*.js',
+                dest: 'public/js/services.js'
             }
         },
         uglify: {
@@ -72,8 +76,8 @@ module.exports = function (grunt) {
                 tasks: ['sass:dev']
             },
             scripts: {
-                files: '<%= concat.dist.src %>',
-                tasks: ['concat:dist']
+                files: ['<%= concat.ctrl.src %>', '<%= concat.srv.src %>'],
+                tasks: ['concat:ctrl', 'concat:srv']
             }
         },
         shell: {
