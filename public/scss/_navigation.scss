@@ -1,15 +1,25 @@
 #main-menu {
-  width:100%;
+  width:98%;
+  @include center-block;
   position:relative;
-  float:left;
   background-color: $nav-bg;
+  @include breakpoint(medium) {
+    float:left;
+  }
   ul {
     list-style:none;
     width:100%;
-    padding: 0 0 1.5rem;
+    padding:0;
     text-align:left;
+    @include breakpoint(medium) {
+      padding: 0 0 1.5rem;
+    }
     li {
-      @include center-block;
+      display:inline-block;
+      width:30%;
+      @include breakpoint(medium) {
+        @include center-block;
+      }
       a {
       color: #414951;
       @include font-face($lato);
