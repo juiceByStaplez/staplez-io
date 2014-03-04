@@ -543,8 +543,13 @@ ul.skill-list.deployment > li {
 li {
   display: inline-block;
   text-align: center;
-  width: 25%;
+  width: 33%;
   margin-bottom: 20px;
+}
+@media (min-width: 50rem) {
+  li {
+    width: 25%;
+  }
 }
 li small {
   display: block;
