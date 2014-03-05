@@ -42,6 +42,8 @@ $skillsets:
   opacity:1;
   @include breakpoint(medium) {
     width:75%;
+    right:0;
+    position:absolute;
   }
   h1 {
     &.title {

@@ -646,6 +646,8 @@ li img {
 @media (min-width: 50rem) {
   .page {
     width: 75%;
+    right: 0;
+    position: absolute;
   }
 }
 .page h1.title {
