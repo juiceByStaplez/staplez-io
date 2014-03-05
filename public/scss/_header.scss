@@ -6,7 +6,7 @@
   color:rgba(255,255,255,.75);
   z-index:9999;
 @include transition(all, .4s, linear);
-  max-height:320px;
+  max-height:240px;
   @include breakpoint(medium) {
     width:25%;
     height:100%;
@@ -14,15 +14,12 @@
     border-right:10px solid $header-border-color;
     position:absolute;
   };
-  &.collapsed {
-    max-height:240px;
+  &.expanded {
+    max-height:320px;
     @include breakpoint(medium){
       max-height:100%;
     }
     & #profile {
-      & > .self-pic {
-        display:none;
-      }
       & > h1, h2, h3 {
         display:none;
       }
@@ -33,13 +30,15 @@
 #profile {
 border-bottom: 1px solid rgba(255,255,255,0.25);
 text-align:center;
+padding-top:30px;
 & > a.self-pic {
-  display:block;
+  display:none;
   margin-top:20px;
   margin-left:auto;
   margin-right:auto;
   @include circle(100px);
   @include breakpoint(medium){
+    display:block;
     margin-top:60px;
     margin-bottom:25px;
   };

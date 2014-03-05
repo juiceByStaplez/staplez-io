@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
   transition: all 0.4s linear;
-  max-height: 320px;
+  max-height: 240px;
 }
 @media (min-width: 50rem) {
   .header {
@@ -340,27 +340,25 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
   }
 }
-.header.collapsed {
-  max-height: 240px;
+.header.expanded {
+  max-height: 320px;
 }
 @media (min-width: 50rem) {
-  .header.collapsed {
+  .header.expanded {
     max-height: 100%;
   }
 }
-.header.collapsed #profile > .self-pic {
-  display: none;
-}
-.header.collapsed #profile > h1, .header.collapsed #profile h2, .header.collapsed #profile h3 {
+.header.expanded #profile > h1, .header.expanded #profile h2, .header.expanded #profile h3 {
   display: none;
 }
 
 #profile {
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   text-align: center;
+  padding-top: 30px;
 }
 #profile > a.self-pic {
-  display: block;
+  display: none;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -372,6 +370,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 50rem) {
   #profile > a.self-pic {
+    display: block;
     margin-top: 60px;
     margin-bottom: 25px;
   }
@@ -640,10 +639,8 @@ li img {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 0 auto;
+  position: relative;
+  margin: 2rem auto 0;
   opacity: 1;
 }
 @media (min-width: 50rem) {
