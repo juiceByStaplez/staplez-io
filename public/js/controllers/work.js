@@ -8,7 +8,7 @@ angular.module('ctrl.work', [])
     to: '2-28-2014',
     url: 'gatorworks.net',
     title: 'Lead Web Developer',
-    description: 'As lead web developer at Gatorworks, my primary duties were converting designs from PSDs to HTML and then turning the static HTML into a completly custom Wordpress theme, including client-branded login screens.'
+    description: 'As lead web developer at Gatorworks, my primary duties were converting designs from PSDs to HTML and then turning the static HTML into a completely custom Wordpress theme, including client-branded login screens.'
     },
     {
       name: 'dezinsInteractive',
