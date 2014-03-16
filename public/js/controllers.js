@@ -1,7 +1,7 @@
-/*! staplezio - v0.0.0 - 2014-03-04
+/*! staplezio - v0.0.0 - 2014-03-16
 * Copyright (c) 2014 ; Licensed  */
-angular.module('ctrl.contact', ['srv.contact'])
-.controller('contactCtrl', function($scope, Contact) {
+angular.module('ctrl.contact', ['srv.contact', '$push'])
+.controller('contactCtrl', function($scope, Contact, $push) {
   $scope.pageClass = 'contact';
   $scope.pageTitle = 'Contact';
   $scope.submitted = false;
@@ -22,7 +22,10 @@ angular.module('ctrl.main', [])
 angular.module('ctrl.nav', [])
 .controller('navCtrl',
   function($scope) {
-    $scope.navEntries = [
+    $scope.toggle = function() {
+
+    };
+    $scope.nav = [
     {
       title: 'Skills',
       url: 'skills',
@@ -41,6 +44,7 @@ angular.module('ctrl.nav', [])
     ];
     $scope.isToggled = false;
   });
+
 angular.module('ctrl.sidebar', [])
 .controller('sidebarCtrl', function($scope) {
 });
@@ -157,7 +161,7 @@ angular.module('ctrl.work', [])
     to: '2-28-2014',
     url: 'gatorworks.net',
     title: 'Lead Web Developer',
-    description: 'As lead web developer at Gatorworks, my primary duties were converting designs from PSDs to HTML and then turning the static HTML into a completly custom Wordpress theme, including client-branded login screens.'
+    description: 'As lead web developer at Gatorworks, my primary duties were converting designs from PSDs to HTML and then turning the static HTML into a completely custom Wordpress theme, including client-branded login screens.'
     },
     {
       name: 'dezinsInteractive',
