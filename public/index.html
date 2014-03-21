@@ -18,7 +18,7 @@
   </head>
   <body ng-app="sio">
 <div class="wrapper">
-        <header class="header">
+        <header class="header {{navState}}" ng-controller="navCtrl">
             <section id="profile" ng-controller="userCtrl">
                 <a href="/" class="self-pic" style="background-image: url(img/{{username}}.png);"></a>
             <h1>Matthew McKey</h1>
@@ -31,18 +31,19 @@
   <li><a href="//github.com/themcstaplez" target="_blank"><i class="fa fa-github"></i></a></li>
 </ul>
     </section>
-        <nav id="main-menu" ng-controller="navCtrl">
+        <nav id="main-menu">
         <ul>
             <li ng-repeat="entry in navEntries" class="list-head" id="{{entry.url}}"><a href="/{{entry.url}}"><i class="fa fa-{{entry.icon}}"></i>{{entry.title}}</a></li>
         </ul>
     </nav>
+    <toggle class="toggle" ng-click="toggleNav(navState)"></toggle>
     </header>
     <div class="page {{ pageClass }} slideUp" ng-view></div>
 </div>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/TweenMax.min.js"></script>
-    <script src="libs/angular-route/angular-route.min.js"></script>
-    <script src="libs/angular-animate/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular-route.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular-animate.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/appRoutes.js"></script>

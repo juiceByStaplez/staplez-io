@@ -1,12 +1,17 @@
 .header {
   background: $header-bg;
-  width:100%;
-  overflow:hidden;
-  position:fixed;
+  width:45%;
+  height:100%;
+  position:absolute;
   color:rgba(255,255,255,.75);
-  z-index:9999;
-@include transition(all, .4s, linear);
-  max-height:240px;
+  z-index:9980;
+  padding-right:40px;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  @include transition(all, .4s, linear);
   @include breakpoint(medium) {
     width:25%;
     height:100%;
@@ -14,17 +19,42 @@
     border-right:10px solid $header-border-color;
     position:absolute;
   };
-  &.expanded {
-    max-height:320px;
+  &.collapsed {
+    -webkit-transform: translateX(-90%);
+    -moz-transform: translateX(-90%);
+    -ms-transform: translateX(-90%);
+    -o-transform: translateX(-90%);
+    transform: translateX(-90%);
+    & .toggle {
+        & > i {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+        }
+      }
     @include breakpoint(medium){
       max-height:100%;
     }
-    & #profile {
-      & > h1, h2, h3 {
-        display:none;
-      }
-    }
   }
+}
+
+.toggle {
+    display:block;
+    position:absolute;
+    width:24px;
+    top:50%;
+    right: 0px;
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    z-index:9980;
+    &:hover {
+      cursor: pointer;
+    }
 }
 
 #profile {
@@ -32,7 +62,7 @@ border-bottom: 1px solid rgba(255,255,255,0.25);
 text-align:center;
 padding-top:30px;
 & > a.self-pic {
-  display:none;
+  display:block;
   margin-top:20px;
   margin-left:auto;
   margin-right:auto;
@@ -52,10 +82,10 @@ padding-top:30px;
   padding:0;
   display:block;
   & li {
-    display:inline-block;
+    display:block;
     font-size:2.5rem;
     margin: 0 auto;
-    width:23.5%;
+    width:25%;
     & > a {
       color:$white;
       display:block;

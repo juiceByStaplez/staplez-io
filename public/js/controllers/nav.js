@@ -1,6 +1,7 @@
 angular.module('ctrl.nav', [])
 .controller('navCtrl',
   function($scope) {
+    $scope.navState = '';
     $scope.navEntries = [
     {
       title: 'Skills',
@@ -19,4 +20,12 @@ angular.module('ctrl.nav', [])
     }
     ];
     $scope.isToggled = false;
+    $scope.toggleNav = function(navState) {
+      if (navState != 'collapsed') {
+        $scope.navState = 'collapsed';
+      } else {
+        $scope.navState = '';
+      }
+      return $scope.navState;
+    };
   });

@@ -16,7 +16,7 @@
     }
     li {
       display:inline-block;
-      width:30%;
+      width:100%;
       @include breakpoint(medium) {
         @include center-block;
       }

@@ -1,7 +1,7 @@
-/*! staplezio - v0.0.0 - 2014-03-16
+/*! staplezio - v0.0.0 - 2014-03-20
 * Copyright (c) 2014 ; Licensed  */
-angular.module('ctrl.contact', ['srv.contact', '$push'])
-.controller('contactCtrl', function($scope, Contact, $push) {
+angular.module('ctrl.contact', ['srv.contact'])
+.controller('contactCtrl', function($scope, Contact) {
   $scope.pageClass = 'contact';
   $scope.pageTitle = 'Contact';
   $scope.submitted = false;
@@ -22,10 +22,8 @@ angular.module('ctrl.main', [])
 angular.module('ctrl.nav', [])
 .controller('navCtrl',
   function($scope) {
-    $scope.toggle = function() {
-
-    };
-    $scope.nav = [
+    $scope.navState = '';
+    $scope.navEntries = [
     {
       title: 'Skills',
       url: 'skills',
@@ -43,8 +41,15 @@ angular.module('ctrl.nav', [])
     }
     ];
     $scope.isToggled = false;
+    $scope.toggleNav = function(navState) {
+      if (navState != 'collapsed') {
+        $scope.navState = 'collapsed';
+      } else {
+        $scope.navState = '';
+      }
+      return $scope.navState;
+    };
   });
-
 angular.module('ctrl.sidebar', [])
 .controller('sidebarCtrl', function($scope) {
 });

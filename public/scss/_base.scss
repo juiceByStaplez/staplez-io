@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: $wrap-bg;
   zoom:1;
   overflow: hidden;
-  min-height:768px;
+  min-height:1024px;
   @include breakpoint(medium){
     height:768px;
   }

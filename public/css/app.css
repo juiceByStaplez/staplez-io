@@ -263,7 +263,7 @@ table {
 }
 
 .ng-leave {
-  z-index: 9999;
+  z-index: 9950;
 }
 
 html {
@@ -302,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ecc16c;
   zoom: 1;
   overflow: hidden;
-  min-height: 768px;
+  min-height: 1024px;
 }
 .wrapper:before, .wrapper:after {
   content: "";
@@ -319,17 +319,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
   background: #e77351;
-  width: 100%;
-  overflow: hidden;
-  position: fixed;
+  width: 45%;
+  height: 100%;
+  position: absolute;
   color: rgba(255, 255, 255, 0.75);
-  z-index: 9999;
+  z-index: 9980;
+  padding-right: 40px;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
   -webkit-transition: all 0.4s linear;
   -moz-transition: all 0.4s linear;
   -ms-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
   transition: all 0.4s linear;
-  max-height: 240px;
 }
 @media (min-width: 50rem) {
   .header {
@@ -340,16 +345,41 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
   }
 }
-.header.expanded {
-  max-height: 320px;
+.header.collapsed {
+  -webkit-transform: translateX(-90%);
+  -moz-transform: translateX(-90%);
+  -ms-transform: translateX(-90%);
+  -o-transform: translateX(-90%);
+  transform: translateX(-90%);
+}
+.header.collapsed .toggle > i {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 @media (min-width: 50rem) {
-  .header.expanded {
+  .header.collapsed {
     max-height: 100%;
   }
 }
-.header.expanded #profile > h1, .header.expanded #profile h2, .header.expanded #profile h3 {
-  display: none;
+
+.toggle {
+  display: block;
+  position: absolute;
+  width: 24px;
+  top: 50%;
+  right: 0px;
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  transform: translateX(10px);
+  z-index: 9980;
+}
+.toggle:hover {
+  cursor: pointer;
 }
 
 #profile {
@@ -358,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 30px;
 }
 #profile > a.self-pic {
-  display: none;
+  display: block;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -384,10 +414,10 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 #social-media li {
-  display: inline-block;
+  display: block;
   font-size: 2.5rem;
   margin: 0 auto;
-  width: 23.5%;
+  width: 25%;
 }
 #social-media li > a {
   color: rgba(255, 255, 255, 0.9);
@@ -428,7 +458,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #main-menu ul li {
   display: inline-block;
-  width: 30%;
+  width: 100%;
 }
 @media (min-width: 50rem) {
   #main-menu ul li {
@@ -639,9 +669,12 @@ li img {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
-  position: relative;
+  position: absolute;
   margin: 2rem auto 0;
   opacity: 1;
+  z-index: 8890;
+  height: 100%;
+  left: 10%;
 }
 @media (min-width: 50rem) {
   .page {
