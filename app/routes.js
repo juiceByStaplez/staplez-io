@@ -38,7 +38,7 @@ module.exports = function(app) {
   app.post('/deploy', function(payload) {
     var payer = payload.body.pusher;
     if (payer.name == 'themcstaplez') {
-      child = shell('git pull',
+      child = shell('git pull origin master',
         function(error, stdout, stderr) {
           if (error != null) {
             console.log('exec error: ' + error)
