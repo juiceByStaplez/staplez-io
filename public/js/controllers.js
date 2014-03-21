@@ -1,4 +1,4 @@
-/*! staplezio - v0.0.0 - 2014-03-20
+/*! staplezio - v0.0.0 - 2014-03-21
 * Copyright (c) 2014 ; Licensed  */
 angular.module('ctrl.contact', ['srv.contact'])
 .controller('contactCtrl', function($scope, Contact) {
@@ -40,7 +40,6 @@ angular.module('ctrl.nav', [])
       icon: 'envelope-o'
     }
     ];
-    $scope.isToggled = false;
     $scope.toggleNav = function(navState) {
       if (navState != 'collapsed') {
         $scope.navState = 'collapsed';
@@ -48,6 +47,9 @@ angular.module('ctrl.nav', [])
         $scope.navState = '';
       }
       return $scope.navState;
+    };
+    $scope.collapseNav = function(navState) {
+      console.log(navState);
     };
   });
 angular.module('ctrl.sidebar', [])

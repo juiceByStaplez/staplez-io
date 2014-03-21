@@ -1,5 +1,5 @@
-angular.module('sio.directives', [])
-.directive('toggle', function() {
+var app = angular.module('sio.directives', [])
+app.directive('toggle', function() {
   'use strict';
   return {
     priority: 0,
@@ -8,4 +8,4 @@ angular.module('sio.directives', [])
     transclude: true,
     controller: 'navCtrl'
   }
-})
+});

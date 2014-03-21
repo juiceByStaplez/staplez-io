@@ -19,7 +19,6 @@ angular.module('ctrl.nav', [])
       icon: 'envelope-o'
     }
     ];
-    $scope.isToggled = false;
     $scope.toggleNav = function(navState) {
       if (navState != 'collapsed') {
         $scope.navState = 'collapsed';
@@ -27,5 +26,8 @@ angular.module('ctrl.nav', [])
         $scope.navState = '';
       }
       return $scope.navState;
+    };
+    $scope.collapseNav = function(navState) {
+      console.log(navState);
     };
   });

@@ -38,7 +38,7 @@
     </nav>
     <toggle class="toggle" ng-click="toggleNav(navState)"></toggle>
     </header>
-    <div class="page {{ pageClass }} slideUp" ng-view></div>
+    <div class="page {{ pageClass }} slideUp" ng-view ng-click="collapseNav({{navState}})"></div>
 </div>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/TweenMax.min.js"></script>
