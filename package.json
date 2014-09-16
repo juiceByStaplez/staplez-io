@@ -9,7 +9,6 @@
   "author": "Matthew McKey <mc@staplez.io> (http://staplez.io/)",
   "dependencies": {
     "express": "latest",
-    "mongoose":"latest",
     "nodemailer":"latest"
   },
   "devDependencies": {
