@@ -7,7 +7,7 @@
   // configuration ===========================================
 
   // config files
-var db = require('./config/db');
+  var db = require('./config/db');
 
   var port = process.env.PORT || 8080; // set our port
   // mongoose.connect(db.url); // connect to our mongoDB database (uncomment after you enter in your own credentials in config/db.js)
@@ -16,7 +16,8 @@ var db = require('./config/db');
     app.use(express.compress());
     app.use(express.static(__dirname + '/public'));   // set the static files location /public/img will be /img for users
     app.use(express.logger('dev'));           // log every request to the console
-    app.use(express.bodyParser());            // have the ability to pull information from html in POST
+    app.use(express.json());            // have the ability to pull information from html in POST
+    app.use(express.urlencoded());
     app.use(express.methodOverride());          // have the ability to simulate DELETE and PUT
   });
 
