@@ -23,7 +23,7 @@ angular.module('ctrl.skills', [])
     experience: 3,
     description: 'Writing mark-up for my projects.'
   },
-    {
+  {
     name: 'css',
     title: 'CSS3',
     category: 'front-end',
@@ -37,7 +37,7 @@ angular.module('ctrl.skills', [])
     experience: 2,
     description: 'Mostly with Wordpress'
   },
-    {
+  {
     name: 'angular',
     title: 'AngularJS',
     category: 'front-end',
@@ -65,33 +65,33 @@ angular.module('ctrl.skills', [])
     experience: 1,
     description: 'Using NodeJS in projects'
   },
-{
-  name: 'grunt',
-  title: 'Grunt',
-  category: 'back-end',
-  experience: 1,
-  description: 'To automate repetitive tasks'
-},
-{
-  name: 'bower',
-  title: 'Bower',
-  category: 'package-manager',
-  experience: 1,
-  description: 'Using Bower to manage front-end assets'
-},
-{
-  name: 'yeoman',
-  title: 'Yeoman',
-  category: 'package-manager',
-  experience: 1,
-  description: 'Scaffolding apps using Yeoman generators.'
-},
-{
-  name: 'digital-ocean',
-  title:'Digital Ocean',
-  category: 'deployment',
-  experience: 1,
-  description: 'Deploying multiple sites/apps in various production environments.'
-}
-];
+  {
+    name: 'grunt',
+    title: 'Grunt',
+    category: 'back-end',
+    experience: 1,
+    description: 'To automate repetitive tasks'
+  },
+  {
+    name: 'bower',
+    title: 'Bower',
+    category: 'package-manager',
+    experience: 1,
+    description: 'Using Bower to manage front-end assets'
+  },
+  {
+    name: 'yeoman',
+    title: 'Yeoman',
+    category: 'package-manager',
+    experience: 1,
+    description: 'Scaffolding apps using Yeoman generators.'
+  },
+  {
+    name: 'digital-ocean',
+    title:'Digital Ocean',
+    category: 'deployment',
+    experience: 1,
+    description: 'Deploying multiple sites/apps in various production environments.'
+  }
+  ];
 });
