@@ -15,7 +15,7 @@
   // app.configure(function() {
     // app.use(express.compress());
     app.use(express.static(__dirname + '/public'));   // set the static files location /public/img will be /img for users
-    app.use(express.logger('dev'));           // log every request to the console
+    // app.use(express.logger('dev'));           // log every request to the console
     app.use(express.json());            // have the ability to pull information from html in POST
     app.use(express.urlencoded());
     app.use(express.methodOverride());          // have the ability to simulate DELETE and PUT
