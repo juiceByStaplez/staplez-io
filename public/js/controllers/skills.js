@@ -35,7 +35,7 @@ angular.module('ctrl.skills', [])
     title: 'Javascript',
     category: 'front-end',
     experience: 2,
-    description: 'Mostly with Wordpress'
+    description: 'Mostly with Wordpress and/or popular Javascript frameworks.'
   },
   {
     name: 'angular',
@@ -55,7 +55,7 @@ angular.module('ctrl.skills', [])
     name: 'ruby',
     title: 'Ruby on Rails',
     category: 'back-end',
-    experience: 3,
+    experience: 2,
     description: 'Writing web apps with Ruby on Rails'
   },
   {
@@ -63,34 +63,34 @@ angular.module('ctrl.skills', [])
     title: 'NodeJS',
     category: 'back-end',
     experience: 1,
-    description: 'Using NodeJS in projects'
+    description: 'Using NodeJS in projects, primarily as a web server. Also, using various Command Line Interfaces written with NodeJS to enhance front-end workflow.'
   },
   {
     name: 'grunt',
     title: 'Grunt',
     category: 'back-end',
     experience: 1,
-    description: 'To automate repetitive tasks'
+    description: 'To automate repetitive tasks front-end tasks such as concatenation and minification of scripts and stylesheets.'
   },
   {
     name: 'bower',
     title: 'Bower',
     category: 'package-manager',
     experience: 1,
-    description: 'Using Bower to manage front-end assets'
+    description: 'Using Bower to manage front-end assets.'
   },
   {
     name: 'yeoman',
     title: 'Yeoman',
     category: 'package-manager',
     experience: 1,
-    description: 'Scaffolding apps using Yeoman generators.'
+    description: 'Scaffolding apps using Yeoman generators. I personally love the yo-wordpress generator.'
   },
   {
     name: 'digital-ocean',
     title:'Digital Ocean',
     category: 'deployment',
-    experience: 1,
+    experience: 2,
     description: 'Deploying multiple sites/apps in various production environments.'
   }
   ];
