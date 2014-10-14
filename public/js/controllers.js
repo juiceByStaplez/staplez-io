@@ -108,7 +108,7 @@ angular.module('ctrl.skills', [])
     title: 'Wordpress',
     category: 'back-end',
     experience: 2,
-    description: 'Mostly with Wordpress'
+    description: 'Building interactive sites along with customized content management experiences for clients.'
   },
   {
     name: 'ruby',
