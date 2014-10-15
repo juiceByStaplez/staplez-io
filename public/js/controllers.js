@@ -1,4 +1,4 @@
-/*! staplezio - v0.0.0 - 2014-10-14
+/*! staplezio - v0.0.0 - 2014-10-15
 * Copyright (c) 2014 ; Licensed  */
 angular.module('ctrl.contact', ['srv.contact'])
 .controller('contactCtrl', function($scope, Contact) {
@@ -123,6 +123,13 @@ angular.module('ctrl.skills', [])
     category: 'back-end',
     experience: 1,
     description: 'Using NodeJS in projects, primarily as a web server. Also, using various Command Line Interfaces written with NodeJS to enhance front-end workflow.'
+  },
+  {
+    name: 'mysql',
+    title: 'MySQL',
+    category: 'back-end',
+    experience: 1,
+    description: 'Writing SQL primarily for use in proprietary Point of Sales software.'
   },
   {
     name: 'grunt',

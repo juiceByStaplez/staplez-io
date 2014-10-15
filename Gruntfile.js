@@ -98,7 +98,6 @@ module.exports = function (grunt) {
                 },
                 options: {
                     style: 'expanded',
-                    sourcemap: true,
                     compass: true
                 }
             }

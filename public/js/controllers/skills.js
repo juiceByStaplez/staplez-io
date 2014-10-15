@@ -66,6 +66,13 @@ angular.module('ctrl.skills', [])
     description: 'Using NodeJS in projects, primarily as a web server. Also, using various Command Line Interfaces written with NodeJS to enhance front-end workflow.'
   },
   {
+    name: 'mysql',
+    title: 'MySQL',
+    category: 'back-end',
+    experience: 1,
+    description: 'Writing SQL primarily for use in proprietary Point of Sales software.'
+  },
+  {
     name: 'grunt',
     title: 'Grunt',
     category: 'back-end',
