@@ -3,5 +3,5 @@ angular.module('ctrl.main', [])
   $scope.pageClass = 'home';
   $scope.pageTitle = 'Home';
 
-  $scope.pageText = 'Welcome to staplez.io, my online interactive portfolio.';
+  $scope.pageText = 'Welcome to staplez.io, my online interactive portfolio';
 });
