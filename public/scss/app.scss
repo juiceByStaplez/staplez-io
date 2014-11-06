@@ -64,7 +64,7 @@ $skillsets:
   float:left;
   color: $peach;
   @include breakpoint(medium) {
-    width:49%;
+    width:75%;
   }
   p {
     @include font-size(12);
@@ -87,6 +87,12 @@ $skillsets:
     }
     &.dezinsInteractive {
       background-image: url(../img/icons/dezinsinteractive.png);
+      width:64px;
+      height:64px;
+      background-repeat: no-repeat;
+    }
+    &.computer {
+      background-image: url(../img/icons/computer.png);
       width:64px;
       height:64px;
       background-repeat: no-repeat;

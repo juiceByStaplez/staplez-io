@@ -1,4 +1,4 @@
-/*! staplezio - v0.0.0 - 2014-10-15
+/*! staplezio - v0.0.0 - 2014-11-06
 * Copyright (c) 2014 ; Licensed  */
 angular.module('ctrl.contact', ['srv.contact'])
 .controller('contactCtrl', function($scope, Contact) {
@@ -172,6 +172,14 @@ angular.module('ctrl.work', [])
   $scope.pageClass = 'work';
   $scope.pageTitle = 'Work';
   $scope.jobs = [
+   {
+      name: 'computer Heaven',
+      from: '05-16-2014',
+      to: '11-01-2014',
+      url: 'computerheaven.com',
+      title: 'Web Developer / Programmer',
+      description: 'Began working at Computer Heaven in May of 2014, while there I created & maintained websites for our different clients, as well as programming features & bug fixes for our in-store Point of Sales system.'
+   },
   {name: 'gatorworks',
     from: '8-28-2013',
     to: '2-28-2014',

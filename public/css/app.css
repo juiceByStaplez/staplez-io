@@ -699,7 +699,7 @@ li img {
 }
 @media (min-width: 50rem) {
   .job {
-    width: 49%;
+    width: 75%;
   }
 }
 .job p {
@@ -731,6 +731,12 @@ li img {
 }
 .job a.dezinsInteractive {
   background-image: url(../img/icons/dezinsinteractive.png);
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+}
+.job a.computer {
+  background-image: url(../img/icons/computer.png);
   width: 64px;
   height: 64px;
   background-repeat: no-repeat;
