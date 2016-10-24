@@ -5,3 +5,5 @@ sftp-config.json
 /codekit-config.json
 
 .psd
+node_modules/
+.idea/
