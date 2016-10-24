@@ -5,7 +5,7 @@ var fs = require('fs'),
 
 module.exports = function(app) {
   app.get('*', function(req, res) {
-      res.sendfile('public/index.html');
+      res.sendFile('public/index.html');
     });
   app.post('/contact', function(req, res) {
     var formData = req.body;
